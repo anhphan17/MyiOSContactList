@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PmD-lo-dBV">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Map-->
+        <scene sceneID="7Ac-Om-FDf">
+            <objects>
+                <viewController title="Map" id="k40-8t-6TX" customClass="MapViewController" customModule="MyContactList" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HXM-L3-Mw1">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Map" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hvO-sk-QiV">
+                                <rect key="frame" x="173.66666666666666" y="411.66666666666669" width="46" height="28.666666666666686"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="cgv-8z-9Um"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="hvO-sk-QiV" firstAttribute="centerX" secondItem="HXM-L3-Mw1" secondAttribute="centerX" id="Dne-Jy-D7E"/>
+                            <constraint firstItem="hvO-sk-QiV" firstAttribute="centerY" secondItem="HXM-L3-Mw1" secondAttribute="centerY" id="eTr-f6-RUn"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Map" image="MapsIcon" selectedImage="MapsIcon" id="dap-N3-mUs"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oaU-8l-6g5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-520" y="558"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="Dp8-x2-seK">
+            <objects>
+                <viewController title="Settings" id="dwn-X9-Bnd" customClass="SettingsViewController" customModule="MyContactList" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MrX-he-sfx">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Settings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Di3-je-qXm">
+                                <rect key="frame" x="146.66666666666666" y="409.33333333333331" width="100" height="33.666666666666686"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="uui-xw-hfE"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Di3-je-qXm" firstAttribute="centerX" secondItem="MrX-he-sfx" secondAttribute="centerX" id="9nQ-Kc-jdd"/>
+                            <constraint firstItem="Di3-je-qXm" firstAttribute="centerY" secondItem="MrX-he-sfx" secondAttribute="centerY" id="X7Y-e0-Feb"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Settings" image="SettingsIcon" selectedImage="SettingsIcon" id="7Tr-Ry-hjf"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kch-HR-wqU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="385" y="175"/>
+        </scene>
+        <!--Contacts-->
+        <scene sceneID="mBn-GD-sm9">
+            <objects>
+                <viewController title="Contacts" id="up4-Qi-y5q" customClass="ContactsViewController" customModule="MyContactList" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aVY-47-ORJ">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contacts" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sDS-q8-7FH">
+                                <rect key="frame" x="149.66666666666666" y="411.66666666666669" width="94" height="28.666666666666686"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="n28-cz-5uI"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="sDS-q8-7FH" firstAttribute="centerY" secondItem="aVY-47-ORJ" secondAttribute="centerY" id="RvE-rs-bZ2"/>
+                            <constraint firstItem="sDS-q8-7FH" firstAttribute="centerX" secondItem="aVY-47-ORJ" secondAttribute="centerX" id="dUG-IF-RHh"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" systemItem="contacts" id="m4f-GW-Y8r"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LyH-7L-6Cm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="386" y="-477"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="JvD-LA-ffX">
+            <objects>
+                <tabBarController id="PmD-lo-dBV" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="cuF-nc-2Ct">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="up4-Qi-y5q" kind="relationship" relationship="viewControllers" id="xW4-jf-foD"/>
+                        <segue destination="dwn-X9-Bnd" kind="relationship" relationship="viewControllers" id="5Of-Ni-nC2"/>
+                        <segue destination="k40-8t-6TX" kind="relationship" relationship="viewControllers" id="4If-8P-iYh"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lIw-oE-h81" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-519" y="-173"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="MapsIcon" width="20" height="20"/>
+        <image name="SettingsIcon" width="20" height="20"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
