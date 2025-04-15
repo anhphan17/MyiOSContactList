@@ -6,8 +6,13 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		09B9D16A2DAF19B00064388C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B9D1692DAF19B00064388C /* Constants.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		09A4560A2D9DA31800429D24 /* MyContactList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyContactList.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		09B9D1692DAF19B00064388C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -45,6 +50,7 @@
 		09A456012D9DA31800429D24 = {
 			isa = PBXGroup;
 			children = (
+				09B9D1692DAF19B00064388C /* Constants.swift */,
 				09A4560C2D9DA31800429D24 /* MyContactList */,
 				09A4560B2D9DA31800429D24 /* Products */,
 			);
@@ -132,6 +138,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09B9D16A2DAF19B00064388C /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
