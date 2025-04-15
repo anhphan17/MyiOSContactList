@@ -49,14 +49,14 @@ class ContactsViewController: UIViewController {
         let textFields: [UITextField] = [txtName, txtAddress, txtCity, txtState, txtZipcode, txtPhone, txtCell, txtEmail]
         if sgmtEditMode.selectedSegmentIndex == 0 {
             for textField in textFields {
-                textField.isEnabled = false
-                textField.borderStyle = UITextField.BorderStyle.none
+                textField.isUserInteractionEnabled = false
+                textField.borderStyle = UITextField.BorderStyle.roundedRect
             }
             btnChange.isHidden = true
         }
         else if sgmtEditMode.selectedSegmentIndex == 1 {
             for textField in textFields {
-                textField.isEnabled = true
+                textField.isUserInteractionEnabled = true
                 textField.borderStyle = UITextField.BorderStyle.roundedRect
             }
             btnChange.isHidden = false

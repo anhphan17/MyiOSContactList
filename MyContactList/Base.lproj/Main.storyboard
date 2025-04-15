@@ -284,15 +284,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="Gfk-Kw-Jbb">
-                                <rect key="frame" x="0.0" y="121" width="393" height="34"/>
+                                <rect key="frame" x="0.0" y="120.99999999999999" width="393" height="34.333333333333329"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34.329999999999998" id="g4N-Bi-dfc"/>
+                                </constraints>
                             </datePicker>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="akP-Bc-NG7"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Gfk-Kw-Jbb" firstAttribute="top" secondItem="akP-Bc-NG7" secondAttribute="top" constant="18" id="Olp-yx-caS"/>
-                            <constraint firstAttribute="trailing" secondItem="Gfk-Kw-Jbb" secondAttribute="trailing" id="T8f-2j-fiK"/>
-                            <constraint firstItem="Gfk-Kw-Jbb" firstAttribute="leading" secondItem="oKk-43-8JI" secondAttribute="leading" id="cDU-GV-DxT"/>
+                            <constraint firstItem="Gfk-Kw-Jbb" firstAttribute="top" secondItem="akP-Bc-NG7" secondAttribute="top" constant="18" id="CgL-eE-EeH"/>
+                            <constraint firstItem="Gfk-Kw-Jbb" firstAttribute="centerX" secondItem="oKk-43-8JI" secondAttribute="centerX" id="xLj-oP-BPP"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="0Pd-0K-CaD"/>
