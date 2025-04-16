@@ -7,11 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0916A6222DAF8C32005E3D3B /* ContactsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0916A6212DAF8C32005E3D3B /* ContactsTableViewController.swift */; };
 		09B9D16A2DAF19B00064388C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B9D1692DAF19B00064388C /* Constants.swift */; };
 		09B9D16D2DAF50500064388C /* MyContactListModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 09B9D16B2DAF50500064388C /* MyContactListModel.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0916A6212DAF8C32005E3D3B /* ContactsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ContactsTableViewController.swift; path = MyContactList/ContactsTableViewController.swift; sourceTree = "<group>"; };
 		09A4560A2D9DA31800429D24 /* MyContactList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyContactList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09B9D1692DAF19B00064388C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		09B9D16C2DAF50500064388C /* MyContactListModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MyContactListModel.xcdatamodel; sourceTree = "<group>"; };
@@ -52,6 +54,7 @@
 		09A456012D9DA31800429D24 = {
 			isa = PBXGroup;
 			children = (
+				0916A6212DAF8C32005E3D3B /* ContactsTableViewController.swift */,
 				09B9D16B2DAF50500064388C /* MyContactListModel.xcdatamodeld */,
 				09B9D1692DAF19B00064388C /* Constants.swift */,
 				09A4560C2D9DA31800429D24 /* MyContactList */,
@@ -142,6 +145,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				09B9D16A2DAF19B00064388C /* Constants.swift in Sources */,
+				0916A6222DAF8C32005E3D3B /* ContactsTableViewController.swift in Sources */,
 				09B9D16D2DAF50500064388C /* MyContactListModel.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
