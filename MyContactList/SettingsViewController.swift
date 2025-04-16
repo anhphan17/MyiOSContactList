@@ -14,7 +14,7 @@ class SettingsViewController: UIViewController, UIPickerViewDataSource, UIPicker
     @IBOutlet weak var swAscending: UISwitch!
     
     let sortOrderItems: Array<String>
- = ["ContactName", "City", "Birthday"]
+ = ["contactName", "city", "birthday"]
     
     override func viewDidLoad() {
         super.viewDidLoad()

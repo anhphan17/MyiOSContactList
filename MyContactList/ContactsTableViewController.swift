@@ -38,8 +38,18 @@ class ContactsTableViewController: UITableViewController {
     }
     
     func loadDataFromDatabase() {
+        let settings = UserDefaults.standard
+        let sortField = settings.string(forKey: Constants.kSortField)
+        let sortAscending = settings.bool(forKey: Constants.kSortDirectionAscending)
+        
         let context = appDelegate.persistentContainer.viewContext
+        
         let request = NSFetchRequest<NSManagedObject>(entityName: "Contact")
+        
+        let sortDescriptor = NSSortDescriptor(key: sortField, ascending: sortAscending)
+        let sortDescriptorArray = [sortDescriptor]
+        request.sortDescriptors = sortDescriptorArray
+        
         do {
             contacts = try context.fetch(request)
         }
@@ -108,6 +118,19 @@ class ContactsTableViewController: UITableViewController {
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }    
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedContact = contacts[indexPath.row] as? Contact
+        let name = selectedContact!.contactName!
+        let actionHandler = { (action: UIAlertAction!) -> Void in self.performSegue(withIdentifier: "EditContact", sender: tableView.cellForRow(at: indexPath))
+        }
+        let alertController = UIAlertController(title: "Contact selected", message: "Selected row: \(indexPath.row) (\(name))", preferredStyle: .alert)
+        let actionCancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        let actionDetails = UIAlertAction(title: "Show Details", style: .default, handler: actionHandler)
+        alertController.addAction(actionCancel)
+        alertController.addAction(actionDetails)
+        present(alertController, animated: true, completion: nil)
     }
     
 
