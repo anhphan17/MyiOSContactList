@@ -8,11 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		09B9D16A2DAF19B00064388C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B9D1692DAF19B00064388C /* Constants.swift */; };
+		09B9D16D2DAF50500064388C /* MyContactListModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 09B9D16B2DAF50500064388C /* MyContactListModel.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		09A4560A2D9DA31800429D24 /* MyContactList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyContactList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09B9D1692DAF19B00064388C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		09B9D16C2DAF50500064388C /* MyContactListModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MyContactListModel.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -50,6 +52,7 @@
 		09A456012D9DA31800429D24 = {
 			isa = PBXGroup;
 			children = (
+				09B9D16B2DAF50500064388C /* MyContactListModel.xcdatamodeld */,
 				09B9D1692DAF19B00064388C /* Constants.swift */,
 				09A4560C2D9DA31800429D24 /* MyContactList */,
 				09A4560B2D9DA31800429D24 /* Products */,
@@ -139,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				09B9D16A2DAF19B00064388C /* Constants.swift in Sources */,
+				09B9D16D2DAF50500064388C /* MyContactListModel.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,6 +346,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		09B9D16B2DAF50500064388C /* MyContactListModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				09B9D16C2DAF50500064388C /* MyContactListModel.xcdatamodel */,
+			);
+			currentVersion = 09B9D16C2DAF50500064388C /* MyContactListModel.xcdatamodel */;
+			path = MyContactListModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 09A456022D9DA31800429D24 /* Project object */;
 }

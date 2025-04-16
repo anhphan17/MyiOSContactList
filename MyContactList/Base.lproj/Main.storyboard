@@ -54,7 +54,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="agp-aD-1YF">
-                                        <rect key="frame" x="0.0" y="81" width="320" height="216"/>
+                                        <rect key="frame" x="0.0" y="80.333333333333343" width="320" height="216.00000000000003"/>
                                     </pickerView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Wdr-RR-cAr">
                                         <rect key="frame" x="69.666666666666643" y="356.33333333333326" width="180.33333333333337" height="31"/>
