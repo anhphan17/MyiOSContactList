@@ -254,7 +254,7 @@
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="Change"/>
                                                         <connections>
-                                                            <segue destination="WUQ-UO-PVN" kind="show" id="J5U-AY-ExN"/>
+                                                            <segue destination="WUQ-UO-PVN" kind="show" identifier="segueContactDate" id="J5U-AY-ExN"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -307,7 +307,7 @@
         <!--Birthdate-->
         <scene sceneID="F6q-jp-kPE">
             <objects>
-                <viewController title="Birthdate" id="WUQ-UO-PVN" sceneMemberID="viewController">
+                <viewController title="Birthdate" id="WUQ-UO-PVN" customClass="DateViewController" customModule="MyContactList" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oKk-43-8JI">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -327,6 +327,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="0Pd-0K-CaD"/>
+                    <connections>
+                        <outlet property="dtpDate" destination="Gfk-Kw-Jbb" id="9Eq-aJ-9ae"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NbU-5n-ZXI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
