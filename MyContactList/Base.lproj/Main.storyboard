@@ -102,7 +102,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="1GQ-Ji-hV8">
-                                <rect key="frame" x="147" y="59" width="99" height="32"/>
+                                <rect key="frame" x="147" y="103" width="99" height="32"/>
                                 <segments>
                                     <segment title="View"/>
                                     <segment title="Edit"/>
@@ -112,7 +112,7 @@
                                 </connections>
                             </segmentedControl>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="interactive" translatesAutoresizingMaskIntoConstraints="NO" id="Szi-D8-0Yi">
-                                <rect key="frame" x="0.0" y="105" width="393" height="713"/>
+                                <rect key="frame" x="0.0" y="149" width="393" height="620"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Er4-eB-zeM">
                                         <rect key="frame" x="8" y="5" width="373" height="307.66666666666669"/>
@@ -309,11 +309,11 @@
             <objects>
                 <viewController title="Birthdate" id="WUQ-UO-PVN" customClass="DateViewController" customModule="MyContactList" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oKk-43-8JI">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <datePicker contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="Gfk-Kw-Jbb">
-                                <rect key="frame" x="0.0" y="18" width="393" height="34.333333333333343"/>
+                                <rect key="frame" x="0.0" y="120.99999999999999" width="393" height="34.333333333333329"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34.329999999999998" id="g4N-Bi-dfc"/>
                                 </constraints>
@@ -386,6 +386,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="up4-Qi-y5q" kind="show" identifier="EditContact" trigger="accessoryAction" id="31F-t6-n0p"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -393,7 +396,13 @@
                             <outlet property="delegate" destination="O7M-8F-TYD" id="svi-SN-SZn"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Contacts" id="552-6f-B3q"/>
+                    <navigationItem key="navigationItem" title="Contacts" id="552-6f-B3q">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="jkj-jD-sll">
+                            <connections>
+                                <segue destination="up4-Qi-y5q" kind="show" identifier="AddContact" id="itr-aV-Ufo"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tZY-BO-qvO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -419,6 +428,9 @@
             <point key="canvasLocation" x="385.49618320610688" y="-477.46478873239437"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="31F-t6-n0p"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="MapsIcon" width="20" height="20"/>
         <image name="SettingsIcon" width="20" height="20"/>
