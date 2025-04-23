@@ -40,7 +40,17 @@ class ContactsTableViewController: UITableViewController {
     func loadDataFromDatabase() {
         let settings = UserDefaults.standard
         let sortField = settings.string(forKey: Constants.kSortField)
-        let sortAscending = settings.bool(forKey: Constants.kSortDirectionAscending)
+        var sortAscending = settings.bool(forKey: Constants.kSortDirectionAscending)
+        
+        /* Class Assignment to change button to flip flop sort function (ascending is now descending and descending is now ascending)
+         
+        if settings.bool(forKey: Constants.kSortDirectionAscending) == true {
+            sortAscending = false
+        }
+        else {
+            sortAscending = true
+        }
+         */
         
         let context = appDelegate.persistentContainer.viewContext
         
@@ -75,6 +85,19 @@ class ContactsTableViewController: UITableViewController {
 
         // Configure the cell...
         let contact = contacts[indexPath.row] as? Contact
+        
+        /*
+        Class Assignment: alternate the color of the rows
+         
+        if indexPath.row % 2 == 0 {
+            cell.textLabel?.textColor = UIColor.red
+        }
+        else {
+            cell.textLabel?.textColor = UIColor.blue
+        }
+         
+         */
+        
         cell.textLabel?.text = contact?.contactName
         cell.detailTextLabel?.text = contact?.city
         cell.accessoryType = UITableViewCell.AccessoryType.detailDisclosureButton
