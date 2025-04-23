@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="OIg-xX-d0G">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PmD-lo-dBV">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Map view configurations" minToolsVersion="14.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -16,21 +17,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Map" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hvO-sk-QiV">
-                                <rect key="frame" x="173.66666666666666" y="411.66666666666669" width="46" height="28.666666666666686"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QSW-es-xaw">
+                                <rect key="frame" x="0.0" y="59" width="393" height="710"/>
+                                <standardMapConfiguration key="preferredConfiguration"/>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hJC-PF-sx4">
+                                <rect key="frame" x="20" y="79" width="90" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Find Me!"/>
+                                <connections>
+                                    <action selector="findUser:" destination="k40-8t-6TX" eventType="touchUpInside" id="YIa-hX-uJ9"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="cgv-8z-9Um"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="hvO-sk-QiV" firstAttribute="centerX" secondItem="HXM-L3-Mw1" secondAttribute="centerX" id="Dne-Jy-D7E"/>
-                            <constraint firstItem="hvO-sk-QiV" firstAttribute="centerY" secondItem="HXM-L3-Mw1" secondAttribute="centerY" id="eTr-f6-RUn"/>
+                            <constraint firstItem="cgv-8z-9Um" firstAttribute="trailing" secondItem="QSW-es-xaw" secondAttribute="trailing" id="2hG-dC-iv7"/>
+                            <constraint firstItem="QSW-es-xaw" firstAttribute="leading" secondItem="cgv-8z-9Um" secondAttribute="leading" id="5oG-mx-jKl"/>
+                            <constraint firstItem="hJC-PF-sx4" firstAttribute="leading" secondItem="cgv-8z-9Um" secondAttribute="leading" constant="20" id="SeN-Bq-umY"/>
+                            <constraint firstItem="QSW-es-xaw" firstAttribute="top" secondItem="cgv-8z-9Um" secondAttribute="top" id="blG-Db-wCl"/>
+                            <constraint firstItem="cgv-8z-9Um" firstAttribute="bottom" secondItem="QSW-es-xaw" secondAttribute="bottom" id="rV3-Dy-g7j"/>
+                            <constraint firstItem="hJC-PF-sx4" firstAttribute="top" secondItem="cgv-8z-9Um" secondAttribute="top" constant="20" id="tJh-aX-pHk"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Map" image="MapsIcon" selectedImage="MapsIcon" id="dap-N3-mUs"/>
+                    <connections>
+                        <outlet property="mapView" destination="QSW-es-xaw" id="rbv-p4-BuF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oaU-8l-6g5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

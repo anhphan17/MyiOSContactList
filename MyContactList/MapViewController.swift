@@ -6,16 +6,29 @@
 //
 
 import UIKit
+import MapKit
 
-class MapViewController: UIViewController {
+class MapViewController: UIViewController, CLLocationManagerDelegate {
 
+    @IBOutlet weak var mapView: MKMapView!
+    
+    var locationManager: CLLocationManager!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        locationManager = CLLocationManager()
+        locationManager.delegate = self
+        locationManager.requestWhenInUseAuthorization()
     }
     
-
+    @IBAction func findUser(_ sender: Any) {
+        mapView.showsUserLocation = true
+        mapView.setUserTrackingMode(.follow, animated: true)
+    }
+    
     /*
     // MARK: - Navigation
 
