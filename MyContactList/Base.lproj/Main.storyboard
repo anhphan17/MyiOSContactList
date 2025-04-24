@@ -29,13 +29,26 @@
                                     <action selector="findUser:" destination="k40-8t-6TX" eventType="touchUpInside" id="YIa-hX-uJ9"/>
                                 </connections>
                             </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="BpY-xV-7Vd">
+                                <rect key="frame" x="83" y="738" width="227" height="32"/>
+                                <segments>
+                                    <segment title="Standard"/>
+                                    <segment title="Hybrid"/>
+                                    <segment title="Satellite"/>
+                                </segments>
+                                <connections>
+                                    <action selector="mapTypeChanged:" destination="k40-8t-6TX" eventType="valueChanged" id="81C-5X-IyQ"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="cgv-8z-9Um"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="cgv-8z-9Um" firstAttribute="trailing" secondItem="QSW-es-xaw" secondAttribute="trailing" id="2hG-dC-iv7"/>
                             <constraint firstItem="QSW-es-xaw" firstAttribute="leading" secondItem="cgv-8z-9Um" secondAttribute="leading" id="5oG-mx-jKl"/>
+                            <constraint firstItem="BpY-xV-7Vd" firstAttribute="bottom" secondItem="cgv-8z-9Um" secondAttribute="bottom" id="QgR-K5-Uzp"/>
                             <constraint firstItem="hJC-PF-sx4" firstAttribute="leading" secondItem="cgv-8z-9Um" secondAttribute="leading" constant="20" id="SeN-Bq-umY"/>
+                            <constraint firstItem="BpY-xV-7Vd" firstAttribute="centerX" secondItem="HXM-L3-Mw1" secondAttribute="centerX" id="Wy5-FP-yCU"/>
                             <constraint firstItem="QSW-es-xaw" firstAttribute="top" secondItem="cgv-8z-9Um" secondAttribute="top" id="blG-Db-wCl"/>
                             <constraint firstItem="cgv-8z-9Um" firstAttribute="bottom" secondItem="QSW-es-xaw" secondAttribute="bottom" id="rV3-Dy-g7j"/>
                             <constraint firstItem="hJC-PF-sx4" firstAttribute="top" secondItem="cgv-8z-9Um" secondAttribute="top" constant="20" id="tJh-aX-pHk"/>
@@ -44,6 +57,7 @@
                     <tabBarItem key="tabBarItem" title="Map" image="MapsIcon" selectedImage="MapsIcon" id="dap-N3-mUs"/>
                     <connections>
                         <outlet property="mapView" destination="QSW-es-xaw" id="rbv-p4-BuF"/>
+                        <outlet property="sgmtMapType" destination="BpY-xV-7Vd" id="XvL-B3-fLA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oaU-8l-6g5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

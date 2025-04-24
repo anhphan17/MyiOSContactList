@@ -14,6 +14,8 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
 
     @IBOutlet weak var mapView: MKMapView!
     
+    @IBOutlet weak var sgmtMapType: UISegmentedControl!
+    
     var contacts:[Contact] = []
     
     var locationManager: CLLocationManager!
@@ -40,6 +42,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         let mp = MapPoint(latitude: userLocation.coordinate.latitude, longitude: userLocation.coordinate.longitude)
         mp.title = "You"
         mp.subtitle = "Are here"
+
         mapView.addAnnotation(mp)
     }
     
@@ -65,6 +68,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         for contact in contacts {
             //as! [Contact] {
             let address = "\(contact.streetAddress!), \(contact.city!), \(contact.state!)"
+                    
             
             //geocoding
             let geoCoder = CLGeocoder()
@@ -88,6 +92,8 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
                 let mp = MapPoint(latitude: coordinate.latitude, longitude: coordinate.longitude)
                 mp.title = contact.contactName
                 mp.subtitle = contact.streetAddress
+                
+                
                 mapView.addAnnotation(mp)
             }
             else {
@@ -99,7 +105,21 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
     @IBAction func findUser(_ sender: Any) {
         mapView.showsUserLocation = true
         mapView.setUserTrackingMode(.follow, animated: true)
+        mapView.showAnnotations(mapView.annotations, animated: true)
     }
+    
+    @IBAction func mapTypeChanged(_ sender: Any) {
+        switch sgmtMapType.selectedSegmentIndex {
+        case 0:
+            mapView.mapType = .standard
+        case 1:
+            mapView.mapType = .hybrid
+        case 2:
+            mapView.mapType = .satellite
+        default: break
+        }
+    }
+    
     
     /*
     // MARK: - Navigation
