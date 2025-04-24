@@ -69,7 +69,6 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
             //as! [Contact] {
             let address = "\(contact.streetAddress!), \(contact.city!), \(contact.state!)"
                     
-            
             //geocoding
             let geoCoder = CLGeocoder()
             geoCoder.geocodeAddressString(address) {(placemarks, error) in
@@ -91,8 +90,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
             if let coordinate = bestMatch?.coordinate {
                 let mp = MapPoint(latitude: coordinate.latitude, longitude: coordinate.longitude)
                 mp.title = contact.contactName
-                mp.subtitle = contact.streetAddress
-                
+                mp.subtitle = "\(contact.streetAddress!) \n \(contact.email!)"
                 
                 mapView.addAnnotation(mp)
             }

@@ -40,7 +40,7 @@ class ContactsTableViewController: UITableViewController {
     func loadDataFromDatabase() {
         let settings = UserDefaults.standard
         let sortField = settings.string(forKey: Constants.kSortField)
-        var sortAscending = settings.bool(forKey: Constants.kSortDirectionAscending)
+        let sortAscending = settings.bool(forKey: Constants.kSortDirectionAscending)
         
         /* Class Assignment to change button to flip flop sort function (ascending is now descending and descending is now ascending)
          
