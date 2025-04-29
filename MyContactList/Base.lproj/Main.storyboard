@@ -154,7 +154,7 @@
                                 <rect key="frame" x="0.0" y="149" width="393" height="620"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Er4-eB-zeM">
-                                        <rect key="frame" x="8" y="5" width="373" height="307.66666666666669"/>
+                                        <rect key="frame" x="8" y="5" width="373" height="422.66666666666669"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ZAV-6z-N6L">
                                                 <rect key="frame" x="0.0" y="0.0" width="373" height="34"/>
@@ -298,6 +298,26 @@
                                                     </button>
                                                 </subviews>
                                             </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="39" translatesAutoresizingMaskIntoConstraints="NO" id="gNn-zf-hU3">
+                                                <rect key="frame" x="0.0" y="322.66666666666669" width="373" height="100"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9RM-qX-cvO">
+                                                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="100" id="Tt8-At-8rs"/>
+                                                            <constraint firstAttribute="height" constant="100" id="uRE-2f-Xev"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2nw-qO-hlQ">
+                                                        <rect key="frame" x="139" y="33" width="234" height="34.333333333333343"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="Take Picture"/>
+                                                        <connections>
+                                                            <action selector="changePicture:" destination="up4-Qi-y5q" eventType="touchUpInside" id="3R6-yd-fdC"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
                                         </subviews>
                                     </stackView>
                                 </subviews>
@@ -326,6 +346,8 @@
                     <navigationItem key="navigationItem" title="Contact" id="TMI-Pa-2DZ"/>
                     <connections>
                         <outlet property="btnChange" destination="p6G-7r-EkE" id="obN-hH-YP6"/>
+                        <outlet property="btnTakePicture" destination="2nw-qO-hlQ" id="Zp4-ze-nvm"/>
+                        <outlet property="imgContactPicture" destination="9RM-qX-cvO" id="oIw-0Y-ruq"/>
                         <outlet property="lblBirthdate" destination="sLZ-hQ-7HK" id="J4q-Qn-Vq8"/>
                         <outlet property="scrollView" destination="Szi-D8-0Yi" id="tjY-yt-qge"/>
                         <outlet property="sgmtEditMode" destination="1GQ-Ji-hV8" id="bup-p9-qRN"/>

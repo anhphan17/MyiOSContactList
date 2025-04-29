@@ -16,6 +16,8 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
     
     @IBOutlet weak var sgmtMapType: UISegmentedControl!
     
+    
+    
     var contacts:[Contact] = []
     
     var locationManager: CLLocationManager!
