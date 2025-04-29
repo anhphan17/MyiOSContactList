@@ -103,16 +103,27 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FP0-fo-uo3">
+                                <rect key="frame" x="351.66666666666669" y="59.000000000000007" width="41.333333333333314" height="20.333333333333336"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="uui-xw-hfE"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="KhH-gT-jXl" firstAttribute="centerY" secondItem="MrX-he-sfx" secondAttribute="centerY" id="7YY-x2-y37"/>
                             <constraint firstItem="KhH-gT-jXl" firstAttribute="centerX" secondItem="MrX-he-sfx" secondAttribute="centerX" id="7zM-ep-qVa"/>
+                            <constraint firstItem="FP0-fo-uo3" firstAttribute="top" secondItem="uui-xw-hfE" secondAttribute="top" id="JHr-h1-coY"/>
+                            <constraint firstItem="uui-xw-hfE" firstAttribute="trailing" secondItem="FP0-fo-uo3" secondAttribute="trailing" id="Lhs-q3-tNB"/>
+                            <constraint firstItem="FP0-fo-uo3" firstAttribute="top" secondItem="uui-xw-hfE" secondAttribute="top" id="dqN-qW-iU2"/>
+                            <constraint firstItem="uui-xw-hfE" firstAttribute="trailing" secondItem="FP0-fo-uo3" secondAttribute="trailing" id="yZ7-eW-8nN"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Settings" image="SettingsIcon" selectedImage="SettingsIcon" id="7Tr-Ry-hjf"/>
                     <connections>
+                        <outlet property="lblBattery" destination="FP0-fo-uo3" id="XNJ-gg-0a9"/>
                         <outlet property="pckSortField" destination="agp-aD-1YF" id="7rc-0i-wPm"/>
                         <outlet property="swAscending" destination="u4T-zS-QhR" id="NHd-zd-e04"/>
                     </connections>
