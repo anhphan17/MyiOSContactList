@@ -41,6 +41,7 @@ class ContactsViewController: UIViewController, UITextFieldDelegate, DateControl
     
     @IBOutlet weak var btnTakePicture: UIButton!
     
+    @IBOutlet weak var lblPhone: UILabel!
     
     
     override func viewDidLoad() {
@@ -63,6 +64,7 @@ class ContactsViewController: UIViewController, UITextFieldDelegate, DateControl
             if currentContact!.birthday != nil {
                 lblBirthdate.text = formatter.string(from: currentContact!.birthday!)
             }
+            
             if let imageData = currentContact?.image as? Data {
                 imgContactPicture.image = UIImage(data: imageData)
             }
@@ -75,7 +77,11 @@ class ContactsViewController: UIViewController, UITextFieldDelegate, DateControl
         for textfield in textFields {
             textfield.addTarget(self, action: #selector(UITextFieldDelegate.textFieldShouldEndEditing(_:)), for: UIControl.Event.editingDidEnd)
         }
+        
+        let longPress = UILongPressGestureRecognizer.init(target: self, action: #selector(callPhone(gesture:)))
+        lblPhone.addGestureRecognizer(longPress)
     }
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if(segue.identifier == "segueContactDate") {
@@ -186,6 +192,17 @@ class ContactsViewController: UIViewController, UITextFieldDelegate, DateControl
             currentContact?.image = image.jpegData(compressionQuality: 1.0)
         }
         dismiss(animated: true, completion: nil)
+    }
+    
+    @objc func callPhone(gesture: UILongPressGestureRecognizer) {
+        if gesture.state == .began {
+            let number = txtCell.text
+            if number!.count > 0 {
+                let url = NSURL(string: "telprompt://\(number!)")
+                UIApplication.shared.open(url! as URL, options: [:], completionHandler: nil)
+                print("Calling Phone Number: \(url!)")
+            }
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
