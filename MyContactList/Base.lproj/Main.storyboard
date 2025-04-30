@@ -125,6 +125,7 @@
                     <connections>
                         <outlet property="lblBattery" destination="FP0-fo-uo3" id="XNJ-gg-0a9"/>
                         <outlet property="pckSortField" destination="agp-aD-1YF" id="7rc-0i-wPm"/>
+                        <outlet property="settingsView" destination="MrX-he-sfx" id="crs-UO-izC"/>
                         <outlet property="swAscending" destination="u4T-zS-QhR" id="NHd-zd-e04"/>
                     </connections>
                 </viewController>
